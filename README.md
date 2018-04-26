@@ -2,7 +2,7 @@
 
 预览地址： [https://ginkosen.github.io/echarts-map/](https://ginkosen.github.io/echarts-map/)
 
-基于 [echarts 4.0](http://echarts.baidu.com/) 实现。
+基于 [echarts 4.0.4](http://echarts.baidu.com/) 实现。
 
 依赖于 [geoJson](http://geojson.org/) 数据. [地图下载](http://echarts.baidu.com/download-map.html)
 
