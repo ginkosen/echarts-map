@@ -36,12 +36,12 @@
 <body class="body">
 <div id="main" class="main echarts"></div>
 <section>
-    <script charset="utf-8" type="text/javascript" src="./js/jquery.js"></script>
-    <script charset="utf-8" type="text/javascript" src="./js/jquery.mobile.custom.min.js"></script>
-    <script charset="utf-8" type="text/javascript" src="./js/Logger.js"></script>
-    <script charset="utf-8" type="text/javascript" src="./js/echarts.min.js"></script>
-    <script charset="utf-8" type="text/javascript" src="./js/itit.common.js"></script>
-    <script charset="utf-8" type="text/javascript" src="./js/itit.map.js"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/jquery.js?v=0a83d"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/jquery.mobile.custom.min.js?v=0a83d"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/Logger.js?v=0a83d"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/echarts.min.js?v=0a83d"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/itit.common.js?v=0a83d"></script>
+    <script charset="utf-8" type="text/javascript" src="./js/itit.map.js?v=0a83d"></script>
     <script>
         $(function () {
             function randomData() {
@@ -166,7 +166,12 @@
                 if ($("#main").hasClass("taphold")) {
                     return;
                 }
-                updateMapView(mapChart, itit.map.getByName(data.name));
+                var _batch = data.batch;
+                if(!Array.isArray(_batch) || _batch.length === 0){
+                    return;
+                }
+                var _data = _batch[0];
+                updateMapView(mapChart, itit.map.getByName(_data.name));
             });
             $("body").on("tap", "#main", function () {
                 var event = arguments[0] || window.event;
