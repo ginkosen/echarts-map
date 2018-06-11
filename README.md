@@ -1,6 +1,7 @@
 ### echarts 地图实现 ##
 
 预览地址： [https://ginkosen.github.io/echarts-map/](https://ginkosen.github.io/echarts-map/)
+预览地址： [https://ginkosen.gitee.io/echarts-map/](https://ginkosen.gitee.io/echarts-map/)
 
 基于 [echarts 4.0.4](http://echarts.baidu.com/) 实现。
 
